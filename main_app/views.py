@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from . models import Frame
 
 
 def index(request):
-	return render(request, 'index.html')
+	frames = Frame.objects.all()
+	return render(request, 'index.html', {"frames": frames})

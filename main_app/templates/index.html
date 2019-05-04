@@ -31,12 +31,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-          </li>
+          {% for frame in frames %}
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#{{ frame.name }}">{{ frame.name }}</a>
+            </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
@@ -49,24 +48,19 @@
     </div>
   </header>
 
-  <section id="about">
+  {% for frame in frames %}
+  <section id="{{ frame.name }}">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2>About this page</h2>
-          <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
-          <ul>
-            <li>Clickable nav links that smooth scroll to page sections</li>
-            <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-            <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-            <li>Minimal custom CSS so you are free to explore your own unique design options</li>
-          </ul>
+          {{ frame.text }}
         </div>
       </div>
     </div>
   </section>
+  {% endfor %}
 
-  <section id="services" class="bg-light">
+  <!-- <section id="services" class="bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
@@ -75,7 +69,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
