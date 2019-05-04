@@ -1,6 +1,7 @@
 venv/
 .DS_Store
 media
+media/
 db.sqlite3
 settings_local.py
 *.sublime-project
