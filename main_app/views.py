@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from . models import Frame
+from . models import Frame, PageOfSlider
 
 
 def index(request):
 	frames = Frame.objects.all()
-	return render(request, 'index.html', {"frames": frames})
+	slides = PageOfSlider.objects.all()
+	return render(request, 'index.html', {"frames": frames,
+										  "slides": slides})

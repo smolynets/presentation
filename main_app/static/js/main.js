@@ -25,5 +25,8 @@
     target: '#mainNav',
     offset: 56
   });
+  $('.carousel').carousel({
+        interval: 15000
+  })
 
 })(jQuery); // End of use strict

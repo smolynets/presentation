@@ -10,3 +10,12 @@ header {
 section {
   padding: 150px 0;
 }
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev{
+  display:block;
+}
+.carousel-control-prev, .carousel-control-next, .carousel-indicators {
+filter: invert(70%);
+}
