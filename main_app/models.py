@@ -35,3 +35,28 @@ class PresentasionName(SingletonModel):
 
     class Meta:
         verbose_name = "PresentasionName"
+
+
+class SubheaderText(SingletonModel):
+    name = models.CharField(max_length=255, default='Subheader_text name')
+    text = models.TextField(blank=False)
+
+    class Meta:
+        verbose_name = 'SubheaderText'
+        verbose_name_plural = 'SubheaderTexts'
+    
+    def __str__(self):
+        return self.name
+
+
+class SubheaderImage(SingletonModel):
+    photo = models.ImageField(
+      blank=True, null=True
+    )
+
+    class Meta:
+        verbose_name = 'SubheaderImage'
+        verbose_name_plural = 'SubheaderImages'
+    
+    def __str__(self):
+        return str(self.id)

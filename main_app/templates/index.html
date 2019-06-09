@@ -42,9 +42,11 @@
     </nav>
 
     <header class="subheader_color text-white">
+      <div class='col-xs-12'>
+        <img  src="{{ subheader_photo.photo.url }}" class="rounded-circle" />
+      </div>
       <div class="container text-center">
-        <h1>Welcome to Scrolling Nav</h1>
-        <p class="lead">A landing page template freshly redesigned for Bootstrap 4</p>
+        <p>{{subheader_text.text|safe}}</p>
       </div>
     </header>
 
