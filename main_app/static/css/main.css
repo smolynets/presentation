@@ -19,3 +19,7 @@ section {
 .carousel-control-prev, .carousel-control-next, .carousel-indicators {
 filter: invert(70%);
 }
+
+.header_color {
+  background-color: #c0c7b9;
+ }
