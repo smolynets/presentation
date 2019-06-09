@@ -1,4 +1,5 @@
 from django.db import models
+from solo.models import SingletonModel
 
 
 class Frame(models.Model):
@@ -24,3 +25,13 @@ class PageOfSlider(models.Model):
 
 	def __str__(self):
 		return self.name
+
+
+class PresentasionName(SingletonModel):
+    name = models.CharField(max_length=255, default='Presentasion Name')
+
+    def __str__(self):
+        return u"PresentasionName"
+
+    class Meta:
+        verbose_name = "PresentasionName"
