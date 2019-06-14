@@ -47,16 +47,3 @@ class SubheaderText(SingletonModel):
     
     def __str__(self):
         return self.headline
-
-
-class SubheaderImage(SingletonModel):
-    photo = models.ImageField(
-      blank=True, null=True
-    )
-
-    class Meta:
-        verbose_name = 'SubheaderImage'
-        verbose_name_plural = 'SubheaderImages'
-    
-    def __str__(self):
-        return str(self.id)
