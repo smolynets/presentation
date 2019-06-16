@@ -53,12 +53,7 @@
       {% if frame.is_slider %}
         <section id="{{ frame.name }}">
           <div id="carouselContent" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              {% for slide in slides %}
-              <li data-target="#carouselContent" data-slide-to={{slide.id}} class="active"></li>
-              {% endfor %}
-            </ol>
-              <div class="carousel-inner col-lg-6 mx-auto slider-height" role="listbox">
+              <div class="carousel-inner col-lg-6 mx-auto" role="listbox">
                 {% for slide in slides %}
                   {% if forloop.first %}
                     <div class="carousel-item active text-center p-4">
