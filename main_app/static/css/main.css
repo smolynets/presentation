@@ -20,6 +20,6 @@ section {
 filter: invert(70%);
 }
 
-.slider-height {
+.carousel-inner {
   height: 300px;
 }
