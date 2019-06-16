@@ -57,10 +57,8 @@
               {% for slide in slides %}
               <li data-target="#carouselContent" data-slide-to={{slide.id}} class="active"></li>
               {% endfor %}
-              <!-- <li data-target="#carouselContent" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselContent" data-slide-to="1"></li> -->
             </ol>
-              <div class="carousel-inner col-lg-6 mx-auto" role="listbox">
+              <div class="carousel-inner col-lg-6 mx-auto slider-height" role="listbox">
                 {% for slide in slides %}
                   {% if forloop.first %}
                     <div class="carousel-item active text-center p-4">

@@ -19,3 +19,7 @@ section {
 .carousel-control-prev, .carousel-control-next, .carousel-indicators {
 filter: invert(70%);
 }
+
+.slider-height {
+  height: 300px;
+}
