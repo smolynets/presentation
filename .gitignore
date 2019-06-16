@@ -65,3 +65,4 @@ docs/_build/
 media
 /media
 local_settings.py
+.vscode
