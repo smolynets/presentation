@@ -36,6 +36,15 @@ class PresentasionName(SingletonModel):
     class Meta:
         verbose_name = "PresentasionName"
 
+class CopyRight(SingletonModel):
+    name = models.CharField(max_length=255, default='CopyRight')
+
+    def __str__(self):
+        return u"CopyRight"
+
+    class Meta:
+        verbose_name = "CopyRight"
+
 
 class SubheaderText(SingletonModel):
     headline = models.CharField(max_length=255, default='Subheader_text name')
