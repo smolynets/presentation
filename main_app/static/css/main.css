@@ -23,3 +23,8 @@ filter: invert(70%);
 .carousel-inner {
   height: 300px;
 }
+
+.carousel-item {
+position:relative;
+top:30%;
+}
