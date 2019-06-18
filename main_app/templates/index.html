@@ -51,7 +51,10 @@
 
     {% for frame in frames %}
       {% if frame.is_slider %}
-        <section id="{{ frame.name|cut:' ' }}">
+        <section id="{{ frame.name|cut:' ' }}" {% if forloop.counter|divisibleby:2 %} class="bg-light" {% endif %}>
+          <div class="text-center p-4 font-weight-bold">
+              <h4>{{ frame.name }}</h>
+          </div>
           <div id="carouselContent" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner col-lg-6 mx-auto" role="listbox">
                 {% for slide in slides %}
@@ -78,6 +81,9 @@
         </section>
       {% else %}
         <section id="{{ frame.name|cut:' ' }}" {% if forloop.counter|divisibleby:2 %} class="bg-light" {% endif %}>
+          <div class="text-center p-4 font-weight-bold">
+              <h4>{{ frame.name }}</h4>
+          </div>
           <div class="container">
             <div class="row">
               <div class="col-lg-8 mx-auto">
