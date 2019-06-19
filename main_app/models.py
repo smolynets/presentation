@@ -49,6 +49,7 @@ class CopyRight(SingletonModel):
 class SubheaderText(SingletonModel):
     headline = models.CharField(max_length=255, default='Subheader_text name')
     text = models.TextField()
+    image = models.ImageField(blank=True, null=True)
 
     class Meta:
         verbose_name = 'SubheaderText'

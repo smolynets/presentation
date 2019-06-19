@@ -41,7 +41,8 @@
       </div>
     </nav>
 
-    <header class="bg-primary text-white">
+    <header class="bg-primary text-white"
+    {% if subheader_text.image %} style="background-image: url({{ subheader_text.image.url }})" {% endif %}>
       <div class="container text-center">
         <h1>{{subheader_text.headline}}</h1>
         <p class="lead">{{subheader_text.text}}</p>
